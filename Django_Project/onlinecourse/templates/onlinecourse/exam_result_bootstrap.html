@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <b>Congratulations,</b> You have passed the exam and completed the course with score 15
+        <h1>Exam Result</h1>
+        <ul class="list-group">
+            {% for submission in submissions %}
+                <li class="list-group-item">
+                    Question: {{ submission.question.text }} <br>
+                    Your Answer: {{ submission.selected_choice.text }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+   
+</body>
+</html>
